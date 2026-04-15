@@ -33,7 +33,10 @@ export default function PostCard({ post }) {
           {post.categories_detail.map((cat) => <span key={cat.id} className="post-card__tag">{cat.name}</span>)}
         </div>
       )}
-      <p className="post-card__snippet">{snippet}</p>
+      <p className="post-card__snippet">
+        {snippet}
+        <span className="post-card__read-more"> Read more...</span>
+      </p>
     </article>
   );
 }
