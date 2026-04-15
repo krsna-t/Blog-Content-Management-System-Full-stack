@@ -10,7 +10,7 @@ export default function CreatePostPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => { getCategories().then(({ data }) => setCategories(data.results ?? data)).catch(() => {}); }, []);
+  useEffect(() => { getCategories().then(({ data }) => setCategories(data.results ?? data)).catch(() => { }); }, []);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
   const handleCategoryChange = (e) => { setForm({ ...form, category_ids: Array.from(e.target.selectedOptions, (o) => Number(o.value)) }); };
@@ -35,8 +35,7 @@ export default function CreatePostPage() {
         {error && <div className="auth-error">{error}</div>}
         <div className="form-group">
           <label htmlFor="title">Title</label>
-          <input id="title" name="title" type="text" required value={form.title} onChange={handleChange} placeholder="Post title" />
-        </div>
+          <input id="title" name="title" type="text" required maxLength={100} value={form.title} onChange={handleChange} placeholder="Post title (max 100 characters)" />        </div>
         <div className="form-group">
           <label htmlFor="content">Content</label>
           <textarea id="content" name="content" required rows={8} value={form.content} onChange={handleChange} placeholder="Write your post…" />
