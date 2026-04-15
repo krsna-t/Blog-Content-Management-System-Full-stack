@@ -7,6 +7,7 @@ import EditPostPage from "./pages/EditPostPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import PostDetailPage from "./pages/PostDetailPage";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/create" element={<ProtectedRoute><CreatePostPage /></ProtectedRoute>} />
           <Route path="/edit/:id" element={<ProtectedRoute><EditPostPage /></ProtectedRoute>} />
+          <Route path="/post/:id" element={<PostDetailPage />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

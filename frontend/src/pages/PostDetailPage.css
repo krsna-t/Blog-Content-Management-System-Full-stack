@@ -1,0 +1,119 @@
+.post-detail-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: #818cf8;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  transition: opacity 0.2s;
+}
+.back-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.post-detail-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(12px);
+}
+
+.post-detail-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding-bottom: 2rem;
+}
+
+.post-detail-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f0f0f5;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.post-detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #71717a;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.post-author {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.dot-separator {
+  color: #3f3f46;
+}
+
+.post-draft-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  background: rgba(234, 179, 8, 0.12);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.2);
+}
+
+.post-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.category-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.post-content {
+  font-size: 1.1rem;
+  color: #d4d4d8;
+  line-height: 1.8;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .post-detail-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+  .post-detail-card {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+  .post-detail-title {
+    font-size: 1.8rem;
+  }
+  .post-content {
+    font-size: 1rem;
+  }
+}

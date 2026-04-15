@@ -15,7 +15,9 @@ export default function PostCard({ post }) {
         {post.status === "draft" && <span className="post-card__badge post-card__badge--draft">Draft</span>}
         {isAuthor && <Link to={`/edit/${post.id}`} className="post-card__edit-btn" id={`edit-post-${post.id}`}>✏️ Edit</Link>}
       </div>
-      <h2 className="post-card__title">{post.title}</h2>
+      <h2 className="post-card__title">
+        <Link to={`/post/${post.id}`}>{post.title}</Link>
+      </h2>
       <div className="post-card__meta">
         <span className="post-card__author">{post.author?.name || "Unknown"}</span>
         <span className="post-card__dot">·</span>
@@ -26,7 +28,12 @@ export default function PostCard({ post }) {
           {post.categories_detail.map((cat) => <span key={cat.id} className="post-card__tag">{cat.name}</span>)}
         </div>
       )}
-      <p className="post-card__snippet">{snippet}</p>
+      <p className="post-card__snippet">
+        {snippet}{" "}
+        <Link to={`/post/${post.id}`} className="read-more-link">
+          Read more &rarr;
+        </Link>
+      </p>
     </article>
   );
 }
