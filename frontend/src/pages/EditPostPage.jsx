@@ -26,10 +26,7 @@ export default function EditPostPage() {
   }, [id]);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-  const handleCategoryChange = (e) => { 
-    const val = e.target.value;
-    setForm({ ...form, category_ids: val ? [Number(val)] : [] }); 
-  };
+  const handleCategoryChange = (e) => { setForm({ ...form, category_ids: Array.from(e.target.selectedOptions, (o) => Number(o.value)) }); };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -69,8 +66,7 @@ export default function EditPostPage() {
           </div>
           <div className="form-group" style={{ flex: 1 }}>
             <label htmlFor="category_ids">Categories</label>
-            <select id="category_ids" name="category_ids" value={form.category_ids[0] || ""} onChange={handleCategoryChange} className="select-single">
-              <option value="">-- Select a category --</option>
+            <select id="category_ids" name="category_ids" multiple value={form.category_ids} onChange={handleCategoryChange} className="select-multi">
               {categories.map((cat) => <option key={cat.id} value={cat.id}>{cat.name}</option>)}
             </select>
           </div>

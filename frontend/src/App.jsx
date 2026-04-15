@@ -18,9 +18,9 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/post/:id" element={<PostDetailPage />} />
           <Route path="/create" element={<ProtectedRoute><CreatePostPage /></ProtectedRoute>} />
           <Route path="/edit/:id" element={<ProtectedRoute><EditPostPage /></ProtectedRoute>} />
+          <Route path="/posts/:id" element={<PostDetailPage />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
