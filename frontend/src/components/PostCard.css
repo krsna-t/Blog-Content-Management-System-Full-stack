@@ -53,6 +53,8 @@
   color: #f0f0f5;
   margin: 0 0 0.6rem;
   line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .post-card__meta {
   display: flex;
@@ -84,6 +86,8 @@
   color: #a1a1aa;
   line-height: 1.6;
   margin: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .post-card__title a {
   color: inherit;

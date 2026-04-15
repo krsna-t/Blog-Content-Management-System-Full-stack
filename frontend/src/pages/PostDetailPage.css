@@ -13,6 +13,7 @@
   margin-bottom: 2rem;
   transition: opacity 0.2s;
 }
+
 .back-link:hover {
   opacity: 0.8;
   text-decoration: underline;
@@ -39,6 +40,8 @@
   margin: 0 0 1rem;
   line-height: 1.2;
   letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .post-detail-meta {
@@ -92,6 +95,8 @@
   font-size: 1.1rem;
   color: #d4d4d8;
   line-height: 1.8;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .post-content p {
@@ -106,14 +111,27 @@
   .post-detail-page {
     padding: 1.5rem 1rem 3rem;
   }
+
   .post-detail-card {
     padding: 2rem 1.5rem;
     border-radius: 16px;
   }
+
   .post-detail-title {
     font-size: 1.8rem;
   }
+
   .post-content {
     font-size: 1rem;
+  }
+
+  .post-detail-title,
+  .post-content p {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .post-detail-card {
+    overflow: hidden;
   }
 }

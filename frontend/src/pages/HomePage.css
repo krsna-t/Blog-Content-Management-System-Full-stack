@@ -1,5 +1,14 @@
-.home-page { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
-.home-hero { text-align: center; margin-bottom: 2.5rem; }
+.home-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.home-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
 .home-hero__title {
   font-size: 2.2rem;
   font-weight: 800;
@@ -11,8 +20,20 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.home-hero__subtitle { color: #71717a; font-size: 1rem; margin: 0 0 1.5rem; }
-.search-bar { display: flex; max-width: 520px; margin: 0 auto; gap: 0.5rem; }
+
+.home-hero__subtitle {
+  color: #71717a;
+  font-size: 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.search-bar {
+  display: flex;
+  max-width: 520px;
+  margin: 0 auto;
+  gap: 0.5rem;
+}
+
 .search-bar__input {
   flex: 1;
   padding: 0.7rem 1rem;
@@ -24,8 +45,17 @@
   font-family: inherit;
   transition: border-color 0.2s;
 }
-.search-bar__input::placeholder { color: #52525b; }
-.search-bar__input:focus { outline: none; border-color: #6366f1; box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12); }
+
+.search-bar__input::placeholder {
+  color: #52525b;
+}
+
+.search-bar__input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
 .search-bar__btn {
   padding: 0 1.25rem;
   background: linear-gradient(135deg, #6366f1, #818cf8);
@@ -37,13 +67,52 @@
   font-size: 0.9rem;
   font-family: inherit;
 }
-.search-bar__btn:hover { opacity: 0.85; }
-.post-feed { display: flex; flex-direction: column; gap: 1.25rem; }
-.feed-status { text-align: center; padding: 3rem 1rem; color: #71717a; font-size: 0.95rem; }
-.feed-status--error { color: #fca5a5; }
+
+.search-bar__btn:hover {
+  opacity: 0.85;
+}
+
+.post-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.feed-status {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #71717a;
+  font-size: 0.95rem;
+}
+
+.feed-status--error {
+  color: #fca5a5;
+}
+
 @media (max-width: 600px) {
-  .home-page { padding: 1.5rem 1rem 3rem; }
-  .home-hero__title { font-size: 1.6rem; }
-  .search-bar { flex-direction: column; }
-  .search-bar__btn { padding: 0.7rem; }
+  .home-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .home-hero__title {
+    font-size: 1.6rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar__btn {
+    padding: 0.7rem;
+  }
+
+  .post-title,
+  .post-content {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .post-card {
+    overflow: hidden;
+  }
 }
