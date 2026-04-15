@@ -28,12 +28,12 @@ export default function PostCard({ post }) {
           {post.categories_detail.map((cat) => <span key={cat.id} className="post-card__tag">{cat.name}</span>)}
         </div>
       )}
-      <p className="post-card__snippet">
-        {snippet}{" "}
-        <Link to={`/post/${post.id}`} className="read-more-link">
-          Read more &rarr;
+      <p className="post-card__snippet">{snippet}</p>
+      <div className="post-card__actions">
+        <Link to={`/post/${post.id}`} className="post-card__read-more-btn">
+          Read Full Blog
         </Link>
-      </p>
+      </div>
     </article>
   );
 }
