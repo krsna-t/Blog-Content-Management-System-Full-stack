@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://blog-content-management-system-full-stack.onrender.com/api/",
+  baseURL: import.meta.env.VITE_API_URL || "https://blog-content-management-system-full-stack.onrender.com/api",
   headers: { "Content-Type": "application/json" },
 });
 
